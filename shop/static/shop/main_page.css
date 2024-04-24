@@ -5,6 +5,13 @@
     src: url('../../../static/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../../../static/fonts/Poppins/Poppins-Light.ttf') format('truetype');
+}
+
 body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -22,12 +29,22 @@ body{
     display: flex;
     align-items: center;
     color: white;
-    justify-content: space-evenly;
+}
+
+.site-header{
+    width: 15%;
+    margin-left: 5%;
+}
+
+.site-header h1{
+    font-size: xxx-large;
+    margin: 0;
 }
 
 .first-row div{
     font-size: large;
-    padding: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .search-bar{
@@ -62,6 +79,37 @@ body{
     background: #2797ce;
     cursor: pointer;
 }
+
+.icon-navbar{
+    margin-left: 2%;
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.icon-navbar p{
+    margin-bottom: 2px;
+    margin-top: 0;
+    font-weight: lighter;
+}
+
+.icon-navbar p:last-child{
+    font-weight: bolder;
+}
+
+.icon-navbar i{
+    align-content: center;
+    padding-right: 10px;
+   font-size: xx-large;
+}
+
+.icon-navbar div{
+    display: flex;
+    flex-direction: column;
+}
+
+
 
 
 
