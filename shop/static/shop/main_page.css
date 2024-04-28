@@ -109,6 +109,32 @@ body{
     flex-direction: column;
 }
 
+.second-row{
+    margin-top: 15px;
+    background-color: rgb(26, 126, 148);
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.category-menu{
+    border-radius: 10px;
+    padding: 10px;
+    align-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.category-menu div{
+    padding: 10px;
+}
+
+.category-menu:hover{
+    background-color: #eae3e3;
+    cursor: pointer;
+}
+
+
 
 
 
