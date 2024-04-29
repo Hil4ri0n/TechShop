@@ -9,12 +9,29 @@
 </head>
 <body>
     <nav>
-        <div class="navbar">
+       <div class="navbar">
             <div class="first-row">
                 <div class="site-header"><h1>e-shop</h1></div>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search..." name="search">
-                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div class="search-bar-container">
+                    <div class="search-bar">
+                        <div id="select">
+                            <p id="selectText">All categories</p>
+                            <i class="fa-solid fa-v fa-flip-horizontal"></i>
+                            <ul id="list">
+                                <li class="options">All categories</li>
+                                <li class="options">Laptops and computers</li>
+                                <li class="options">Smartphones and smartwatches</li>
+                                <li class="options">Gaming and streaming</li>
+                                <li class="options">Hardware</li>
+                                <li class="options">Off-line equipment</li>
+                                <li class="options">TV and audio</li>
+                                <li class="options">Smarthome and lifestyle</li>
+                                <li class="options">Accessories</li>
+                            </ul>
+                        </div>
+                        <input type="text" id="product-search" placeholder="Search In All Categories">
+                        <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
+                    </div>
                 </div>
                 <div class="icon-navbar">
                     <i class="fa-solid fa-cart-shopping"></i>
@@ -34,38 +51,68 @@
             <div class="second-row">
                 <div class="category-menu">
                     <i class="fa-solid fa-laptop fa-2xl"></i>
-                    <div>Laptops<br>and computers</div>
+                    <div class="option-name">Laptops<br>and computers</div>
+                    <div class="menu-list-container">
+                        <ul class="menu-list open">
+                            <li>Laptopy/Notebooki/Ultrabooki<i class="fa-solid fa-greater-than"></i></li>
+                            <li>Laptopy biznesowe<i class="fa-solid fa-greater-than"></i></li>
+                            <li>Komputery stacjonarne<i class="fa-solid fa-greater-than"></i></li>
+                            <li>Tablety<i class="fa-solid fa-greater-than"></i></li>
+                            <li>Serwery<i class="fa-solid fa-greater-than"></i></li>
+                        </ul>
+                        <ul class="submenu-list">
+                            <li>option</li>
+                            <li>option</li>
+                            <li>option</li>
+                            <li>option</li>
+                            <li>option</li>
+                            <li>option</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="category-menu">
                     <i class="fa-solid fa-mobile fa-2xl"></i>
-                    <div>Smartphones<br>and smartwatches</div>
+                    <div class="option-name">Smartphones<br>and smartwatches</div>
                 </div>
                 <div class="category-menu">
                     <i class="fa-solid fa-gamepad fa-2xl"></i>
-                    <div>Gaming<br>and streaming</div>
+                    <div class="option-name">Gaming<br>and streaming</div>
                 </div>
                 <div class="category-menu">
                     <i class="fa-solid fa-microchip fa-2xl"></i>
-                    <div>Hardware</div>
+                    <div class="option-name">Hardware</div>
                 </div>
                 <div class="category-menu">
                     <i class="fa-solid fa-print fa-2xl"></i>
-                    <div>off-line equipment</div>
+                    <div class="option-name">off-line equipment</div>
                 </div>
                 <div class="category-menu">
                     <i class="fa-solid fa-tv fa-2xl"></i>
-                    <div>TV and audio</div>
+                    <div class="option-name">TV and audio</div>
                 </div>
                 <div class="category-menu">
                     <i class="fa-solid fa-house-signal fa-2xl"></i>
-                    <div>Smarthome and lifestyle</div>
+                    <div class="option-name">Smarthome and lifestyle</div>
                 </div>
                 <div class="category-menu">
                     <i class="fa-solid fa-plug fa-2xl"></i>
-                    <div>Accessories</div>
+                    <div class="option-name">Accessories</div>
                 </div>
             </div>
         </div>
     </nav>
+<script src="{% static 'shop/js/searchBar.js' %}"></script>
+<script>
+
+    /*function openMenu(){
+
+    }
+
+    let categories = document.getElementsByClassName("category-menu");
+
+    for(let category of categories){
+        category.addEventListener('mouseover', )
+    }*/
+</script>
 </body>
 </html>
