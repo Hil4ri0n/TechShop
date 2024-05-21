@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <title>Main Page</title>
     <link type="text/css" rel="stylesheet" href="{% static 'shop/main_page.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'shop/slideshow.css' %}">
     <script src="https://kit.fontawesome.com/975f0ff2c3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav>
+    <div class="main-container">
+        <nav>
        <div class="navbar">
             <div class="first-row">
                 <div class="site-header"><h1>e-shop</h1></div>
@@ -396,42 +398,35 @@
             </div>
         </div>
     </nav>
+        <div class="slideshow">
+            <div class="slideshow-container">
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="{% static 'shop/img/phone1.png' %}" style="width:100%">
+                <div class="text">Caption Text</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="{% static 'shop/img/phone2.png' %}" style="width:100%">
+                <div class="text">Caption Two</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="{% static 'shop/img/phone4.png' %}" style="width:100%">
+                <div class="text">Caption Three</div>
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+    </div>
+
+
 <script src="{% static 'shop/js/searchBar.js' %}"></script>
-<script>
-
-    function openMenu(){
-        let menu = this.getElementsByClassName("menu-list")[0];
-        menu.classList.add("open");
-    }
-
-    function closeMenu(){
-        let menu = this.getElementsByClassName("menu-list")[0];
-        menu.classList.remove("open");
-    }
-
-    function openSubmenu(){
-        let menu = this.getElementsByClassName("submenu-list")[0];
-        menu.classList.add("open");
-    }
-
-    function closeSubmenu(){
-        let menu = this.getElementsByClassName("submenu-list")[0];
-        menu.classList.remove("open");
-    }
-
-    let categories = document.getElementsByClassName("category-menu");
-
-    for(let category of categories){
-        category.addEventListener('mouseover', openMenu);
-        category.addEventListener("mouseout", closeMenu);
-        let name = category.getElementsByClassName("option-name")[0].innerHTML;
-        console.log(name);
-        let subcategories = category.getElementsByClassName('menu-list')[0].getElementsByTagName("li");
-        for(let subcategory of subcategories){
-            subcategory.addEventListener("mouseover", openSubmenu);
-            subcategory.addEventListener("mouseout", closeSubmenu);
-        }
-    }
-</script>
+<script src="{% static 'shop/js/mainMenu.js' %}"></script>
+<script src="{% static 'shop/js/slideShow.js' %}"></script>
 </body>
 </html>
